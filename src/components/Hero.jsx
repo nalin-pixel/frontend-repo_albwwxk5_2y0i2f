@@ -1,5 +1,5 @@
 import Spline from '@splinetool/react-spline';
-import { Rocket, Star, Mail, Wand2 } from 'lucide-react';
+import { Rocket, Star, Mail, Leaf } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Hero() {
@@ -13,10 +13,10 @@ export default function Hero() {
         />
       </div>
 
-      {/* Vignette + color glow that doesn't block interaction */}
+      {/* Vignette + green glow that doesn't block interaction */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.35)_55%,rgba(5,5,12,0.85)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(600px_300px_at_80%_20%,rgba(59,130,246,0.18),transparent),radial-gradient(800px_400px_at_10%_80%,rgba(168,85,247,0.2),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.35)_55%,rgba(6,20,13,0.9)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(600px_300px_at_80%_20%,rgba(34,197,94,0.2),transparent),radial-gradient(800px_400px_at_10%_80%,rgba(16,185,129,0.18),transparent)]" />
       </div>
 
       {/* Content */}
@@ -27,15 +27,15 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm backdrop-blur"
         >
-          <Star className="h-4 w-4 text-sky-300" />
-          Verified Identity • Futuristic Vibes
+          <Star className="h-4 w-4 text-emerald-300" />
+          Verified Identity • Green Cosmos
         </motion.span>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="bg-gradient-to-r from-sky-200 via-fuchsia-200 to-emerald-200 bg-clip-text text-5xl font-extrabold tracking-tight text-transparent sm:text-6xl md:text-7xl"
+          className="bg-gradient-to-r from-emerald-200 via-lime-200 to-teal-200 bg-clip-text text-5xl font-extrabold tracking-tight text-transparent sm:text-6xl md:text-7xl"
         >
           Hikmah Cahyo Setiawan
         </motion.h1>
@@ -46,7 +46,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-3 max-w-2xl text-base text-white/85 sm:text-lg"
         >
-          Graphic Designer • Student in Pasuruan — crafting iridescent visuals and motion-rich interfaces. I love blending holographic textures with clean, practical UX.
+          Graphic Designer • Student in Pasuruan — crafting lush, verdant interfaces and nature-infused branding. Blending organic gradients with clean, practical UX.
         </motion.p>
 
         <motion.div
@@ -57,7 +57,7 @@ export default function Hero() {
         >
           <a
             href="#work"
-            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-fuchsia-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 transition-all hover:scale-[1.03] hover:shadow-fuchsia-500/30"
+            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-lime-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 transition-all hover:scale-[1.03] hover:shadow-lime-500/30"
           >
             <Rocket className="h-4 w-4" /> Explore Work
           </a>
@@ -69,7 +69,7 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* Floating chips & accents */}
+        {/* Floating chips & increased illustrations */}
         <motion.div
           aria-hidden
           className="pointer-events-none absolute left-6 top-24 hidden md:block"
@@ -77,7 +77,7 @@ export default function Hero() {
           transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
         >
           <div className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/10 px-3 py-2 text-xs">
-            <Wand2 className="h-4 w-4 text-fuchsia-300" /> holographic UI
+            <Leaf className="h-4 w-4 text-emerald-300" /> organic UI
           </div>
         </motion.div>
         <motion.div
@@ -86,7 +86,23 @@ export default function Hero() {
           animate={{ y: [0, 12, 0] }}
           transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
         >
-          <div className="rounded-full bg-gradient-to-r from-sky-500/40 to-fuchsia-500/40 p-3 shadow-lg shadow-fuchsia-500/20 backdrop-blur">●</div>
+          <div className="rounded-full bg-gradient-to-r from-emerald-500/40 to-lime-500/40 p-3 shadow-lg shadow-emerald-500/20 backdrop-blur">●</div>
+        </motion.div>
+        <motion.div
+          aria-hidden
+          className="pointer-events-none absolute right-24 top-32 hidden md:block"
+          animate={{ x: [0, 8, 0], y: [0, -6, 0] }}
+          transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
+        >
+          <div className="h-14 w-14 rounded-xl border border-emerald-300/30 bg-emerald-200/10 backdrop-blur" />
+        </motion.div>
+        <motion.div
+          aria-hidden
+          className="pointer-events-none absolute left-20 bottom-20 hidden md:block"
+          animate={{ rotate: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
+        >
+          <div className="h-10 w-32 rounded-full bg-gradient-to-r from-emerald-400/60 to-teal-400/60" />
         </motion.div>
       </div>
     </section>
