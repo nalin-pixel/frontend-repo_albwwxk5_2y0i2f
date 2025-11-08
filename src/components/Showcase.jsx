@@ -3,22 +3,22 @@ import { motion } from 'framer-motion';
 
 const works = [
   {
-    title: 'Liquid Neon Interface',
+    title: 'Iridescent Identity Kit',
+    tag: 'Branding',
+    icon: <PenTool className="h-5 w-5" />,
+    desc: 'Logo, palette, and social system built around holographic materials and soft motion.'
+  },
+  {
+    title: 'Neon UI Frames',
     tag: 'UI/UX',
     icon: <Wand2 className="h-5 w-5" />,
-    desc: 'A holographic gradient dashboard with liquid morphing cards and smooth glass reflections.'
+    desc: 'Explorations of cards, chips, and navigation with micro-interactions and parallax.'
   },
   {
     title: 'Cosmic Commerce',
     tag: 'Web App',
     icon: <Code2 className="h-5 w-5" />,
-    desc: 'Headless storefront with trippy galaxy theming and micro-animations for delightful browsing.'
-  },
-  {
-    title: 'Dreamwave Poster Set',
-    tag: 'Graphics',
-    icon: <PenTool className="h-5 w-5" />,
-    desc: 'Surreal vector compositions with iridescent gradients and vaporwave typography.'
+    desc: 'Concept storefront featuring dreamy gradients and playful motion for product focus.'
   }
 ];
 
@@ -28,7 +28,7 @@ export default function Showcase() {
       <div className="mb-12 flex items-end justify-between">
         <div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Selected Work</h2>
-          <p className="mt-2 text-white/70">A mix of interfaces, web apps, and graphics exploring surreal aesthetics.</p>
+          <p className="mt-2 text-white/70">A mix of branding, UI frames, and web concepts exploring surreal aesthetics.</p>
         </div>
         <div className="hidden items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs backdrop-blur sm:flex">
           <Sparkles className="h-4 w-4 text-fuchsia-300" /> curated
@@ -41,7 +41,7 @@ export default function Showcase() {
         viewport={{ once: true, amount: 0.2 }}
         variants={{
           hidden: { opacity: 0, y: 20 },
-          show: { opacity: 1, y: 0, transition: { staggerChildren: 0.1 } }
+          show: { opacity: 1, y: 0, transition: { staggerChildren: 0.12 } }
         }}
         className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
       >
@@ -51,7 +51,7 @@ export default function Showcase() {
             variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
             className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 transition-all hover:translate-y-[-2px] hover:border-white/20 hover:bg-white/10"
           >
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-fuchsia-500/20 to-sky-500/20 px-3 py-1 text-xs text-white/80">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500/20 to-fuchsia-500/20 px-3 py-1 text-xs text-white/80">
               {w.icon}
               {w.tag}
             </div>

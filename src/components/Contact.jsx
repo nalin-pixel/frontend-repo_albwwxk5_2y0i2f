@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative z-10 mx-auto max-w-5xl px-6 py-24 text-white">
+    <section id="contact" className="relative z-10 mx-auto max-w-6xl px-6 py-24 text-white">
       <motion.div
         initial={{ opacity: 0, scale: 0.98 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -13,12 +13,12 @@ export default function Contact() {
       >
         <div className="mb-6 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Let’s create something surreal</h2>
-          <p className="mt-2 text-white/70">Open for collaborations, commissions, and full-stack builds.</p>
+          <p className="mt-2 text-white/70">Open for collaborations, commissions, and experimental UI builds.</p>
         </div>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href="mailto:hello@xzmply.io"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-fuchsia-500 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/30 transition-all hover:scale-[1.03] hover:shadow-sky-500/30"
+            href="mailto:hikmah.cahyo.setiawan@example.com"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-fuchsia-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 transition-all hover:scale-[1.03] hover:shadow-fuchsia-500/30"
           >
             <Mail className="h-4 w-4" /> Email
           </a>
@@ -40,7 +40,7 @@ export default function Contact() {
           </a>
         </div>
       </motion.div>
-      <p className="mt-6 text-center text-xs text-white/50">© {new Date().getFullYear()} xzmply — crafted in the cosmic void</p>
+      <p className="mt-6 text-center text-xs text-white/50">© {new Date().getFullYear()} Hikmah Cahyo Setiawan — crafted in the cosmic void</p>
 
       {/* subtle animated orbs as illustrations */}
       <motion.div
