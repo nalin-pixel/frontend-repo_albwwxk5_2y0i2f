@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 export default function Hero() {
   return (
     <section className="relative h-[95vh] w-full overflow-hidden">
-      {/* 3D cover */}
+      {/* 3D cover (surreal rollercoaster universe) */}
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/qQUip0dJPqrrPryE/scene.splinecode"
+          scene="https://prod.spline.design/7m4PRZ7kg6K1jPfF/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
       </div>
@@ -16,7 +16,41 @@ export default function Hero() {
       {/* Vignette + green glow that doesn't block interaction */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.35)_55%,rgba(6,20,13,0.9)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(600px_300px_at_80%_20%,rgba(34,197,94,0.2),transparent),radial-gradient(800px_400px_at_10%_80%,rgba(16,185,129,0.18),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(700px_380px_at_80%_20%,rgba(34,197,94,0.22),transparent),radial-gradient(900px_520px_at_10%_80%,rgba(16,185,129,0.2),transparent)]" />
+      </div>
+
+      {/* Surreal overlays: flowing ribbons + twinkles (do not block Spline) */}
+      <div className="pointer-events-none absolute inset-0">
+        {/* holographic ribbon */}
+        <motion.div
+          aria-hidden
+          className="absolute left-[-10%] top-[15%] h-32 w-[120%] -rotate-6 rounded-full bg-[linear-gradient(90deg,rgba(16,185,129,0)_0%,rgba(16,185,129,0.35)_25%,rgba(132,204,22,0.35)_50%,rgba(20,184,166,0.35)_75%,rgba(16,185,129,0)_100%)] blur-md"
+          animate={{ x: [0, 20, 0] }}
+          transition={{ repeat: Infinity, duration: 8, ease: 'easeInOut' }}
+        />
+        {/* neon wave */}
+        <motion.div
+          aria-hidden
+          className="absolute bottom-[20%] left-[-15%] h-24 w-[130%] rotate-6 rounded-full bg-[linear-gradient(90deg,rgba(20,184,166,0)_0%,rgba(34,197,94,0.3)_40%,rgba(132,204,22,0.28)_60%,rgba(20,184,166,0)_100%)]"
+          animate={{ x: [0, -24, 0] }}
+          transition={{ repeat: Infinity, duration: 9, ease: 'easeInOut' }}
+        />
+        {/* twinkles */}
+        <div className="absolute inset-0">
+          {[...Array(18)].map((_, i) => (
+            <motion.span
+              key={i}
+              className="absolute h-[2px] w-[2px] rounded-full bg-emerald-200"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                opacity: 0.7,
+              }}
+              animate={{ opacity: [0.2, 1, 0.2], y: [0, -3, 0] }}
+              transition={{ repeat: Infinity, duration: 3 + Math.random() * 3, ease: 'easeInOut' }}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Content */}
@@ -46,7 +80,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-3 max-w-2xl text-base text-white/85 sm:text-lg"
         >
-          Graphic Designer • Student in Pasuruan — crafting lush, verdant interfaces and nature-infused branding. Blending organic gradients with clean, practical UX.
+          Graphic Designer • Student in Pasuruan — crafting lush, surreal visuals and nature-infused branding. Blending organic gradients with clean, practical UX.
         </motion.p>
 
         <motion.div
